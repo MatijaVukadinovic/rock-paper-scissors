@@ -6,4 +6,21 @@ function getComputerChoice() {
     return choiceArray[randomInt];
 }
 
+function getHumanChoice() {
+
+    let humanChoice = prompt("Choose rock, paper or scissors:");
+
+    if (humanChoice == "rock") {
+        return "rock";
+    } else if (humanChoice == "paper") {
+        return "paper";
+    } else if (humanChoice == "scissors") {
+        return "scissors";
+    } else {
+        alert("Not a valid option");
+    }
+
+}
+
 console.log(getComputerChoice());
+console.log(getHumanChoice());
