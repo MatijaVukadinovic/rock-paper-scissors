@@ -46,6 +46,18 @@ function playRound(humanChoice, computerChoice) {
     pointsComputer.innerHTML = `Computer score: ${computerScore}`;
 }
 
+function declareWinner() {
+
+    if (humanScore > computerScore) {
+        resultDisplay.innerHTML = "You win the game!";
+    } else if (computerScore > humanScore) {
+        resultDisplay.innerHTML = "Computer wins the game!";
+    } else {
+        resultDisplay.innerHTML = "The game was tied!";
+    }
+}
+
+
 rockButton.addEventListener("click", function() {
 
     playRound("rock", computerSelection);
