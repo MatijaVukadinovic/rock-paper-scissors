@@ -5,6 +5,21 @@ let rockButton = document.getElementById("rockButton");
 let paperButton = document.getElementById("paperButton");
 let scissorsButton = document.getElementById("scissorsButton");
 
+rockButton.addEventListener("click", function() {
+
+
+})
+
+paperButton.addEventListener("click", function() {
+
+
+})
+
+scissorsButton.addEventListener("click", function() {
+
+
+})
+
 let humanScore = 0;
 let computerScore = 0;
 
