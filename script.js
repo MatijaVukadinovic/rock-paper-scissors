@@ -1,22 +1,26 @@
 //let humanSelection = getHumanChoice();
-//let computerSelection = getComputerChoice();
+let computerSelection = getComputerChoice();
 
 let rockButton = document.getElementById("rockButton");
 let paperButton = document.getElementById("paperButton");
 let scissorsButton = document.getElementById("scissorsButton");
+let resultDisplay = document.getElementById("resultDisplay")
 
 rockButton.addEventListener("click", function() {
 
+    playRound("rock", computerSelection);
 
 })
 
 paperButton.addEventListener("click", function() {
 
+    playRound("paper", computerSelection);
 
 })
 
 scissorsButton.addEventListener("click", function() {
 
+    playRound("scissors", computerSelection);
 
 })
 
