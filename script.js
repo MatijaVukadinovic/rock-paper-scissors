@@ -56,6 +56,13 @@ function playGame() {
         computerSelection = getComputerChoice();
     }
 
+    if (humanScore > computerScore) {
+        console.log("You win the game!");
+    } else if (computerScore > humanScore) {
+        console.log("Computer wins the game!");
+    } else {
+        console.log("The game was tied!");
+    }
 }
 
 playGame();
