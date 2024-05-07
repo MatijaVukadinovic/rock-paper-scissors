@@ -20,17 +20,6 @@ function getComputerChoice() {
     return computerChoice;
 }
 
-function getHumanChoice() {
-
-    let humanChoice = prompt("Choose rock, paper or scissors:");
-
-    humanChoice = humanChoice.trim().toLowerCase();
-
-    console.log(`Human choice: ${humanChoice}`);
-    return humanChoice;
-}
-
-
 function playRound(humanChoice, computerChoice) {
 
     if (humanChoice === computerChoice) {
@@ -57,18 +46,21 @@ function playRound(humanChoice, computerChoice) {
 rockButton.addEventListener("click", function() {
 
     playRound("rock", computerSelection);
+    computerSelection = getComputerChoice();
 
 })
 
 paperButton.addEventListener("click", function() {
 
     playRound("paper", computerSelection);
+    computerSelection = getComputerChoice();
 
 })
 
 scissorsButton.addEventListener("click", function() {
 
     playRound("scissors", computerSelection);
+    computerSelection = getComputerChoice();
 
 })
 
