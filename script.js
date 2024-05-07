@@ -1,5 +1,5 @@
-let humanSelection = getHumanChoice();
-let computerSelection = getComputerChoice();
+//let humanSelection = getHumanChoice();
+//let computerSelection = getComputerChoice();
 
 let humanScore = 0;
 let computerScore = 0;
@@ -63,4 +63,4 @@ function playRound(humanChoice, computerChoice) {
     console.log(`Human Score: ${humanScore}`);
 }
 
-playRound(humanSelection, computerSelection);
+//playRound(humanSelection, computerSelection);
