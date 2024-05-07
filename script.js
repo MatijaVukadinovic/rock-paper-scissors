@@ -46,6 +46,9 @@ function playRound(humanChoice, computerChoice) {
 
     if (humanScore === 5 || computerScore === 5) {
         declareWinner();
+        rockButton.disabled = true;
+        paperButton.disabled = true;
+        scissorsButton.disabled = true;
     }
 }
 
