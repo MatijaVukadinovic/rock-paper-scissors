@@ -4,7 +4,10 @@ let computerSelection = getComputerChoice();
 let rockButton = document.getElementById("rockButton");
 let paperButton = document.getElementById("paperButton");
 let scissorsButton = document.getElementById("scissorsButton");
+
 let resultDisplay = document.getElementById("resultDisplay")
+let pointsPlayer = document.getElementById("pointsPlayer");
+let pointsComputer = document.getElementById("pointsComputer");
 
 let humanScore = 0;
 let computerScore = 0;
