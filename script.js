@@ -40,10 +40,10 @@ function playGame() {
             (humanChoice === "scissors" && computerChoice === "paper")
         ) {
             humanScore++;
-            console.log("You win!");
+            console.log("You win the round!");
         } else {
             computerScore++;
-            console.log("Computer wins!");
+            console.log("Computer wins the round!");
         }
     
         console.log(`Computer score: ${computerScore}`);
@@ -52,6 +52,8 @@ function playGame() {
 
     for (let i = 0; i < 5; i++) {
         playRound(humanSelection, computerSelection);
+        humanSelection = getHumanChoice();
+        computerSelection = getComputerChoice();
     }
 
 }
