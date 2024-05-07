@@ -42,8 +42,8 @@ function playRound(humanChoice, computerChoice) {
         resultDisplay.innerHTML = "Computer wins the round!";
     }
 
-    console.log(`Computer score: ${computerScore}`);
-    console.log(`Human Score: ${humanScore}`);
+    pointsPlayer.innerHTML = `Player Score: ${humanScore}`;
+    pointsComputer.innerHTML = `Computer score: ${computerScore}`;
 }
 
 rockButton.addEventListener("click", function() {
