@@ -50,12 +50,6 @@ function playGame() {
         console.log(`Human Score: ${humanScore}`);
     }
 
-    for (let i = 0; i < 5; i++) {
-        playRound(humanSelection, computerSelection);
-        humanSelection = getHumanChoice();
-        computerSelection = getComputerChoice();
-    }
-
     if (humanScore > computerScore) {
         console.log("You win the game!");
     } else if (computerScore > humanScore) {
