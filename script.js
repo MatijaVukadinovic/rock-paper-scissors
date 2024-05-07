@@ -44,6 +44,10 @@ function playRound(humanChoice, computerChoice) {
 
     pointsPlayer.innerHTML = `Player Score: ${humanScore}`;
     pointsComputer.innerHTML = `Computer score: ${computerScore}`;
+
+    if (humanScore === 5 || computerScore === 5) {
+        declareWinner();
+    }
 }
 
 function declareWinner() {
