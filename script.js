@@ -1,4 +1,3 @@
-//let humanSelection = getHumanChoice();
 let computerSelection = getComputerChoice();
 
 let rockButton = document.getElementById("rockButton");
@@ -82,21 +81,3 @@ scissorsButton.addEventListener("click", function() {
     computerSelection = getComputerChoice();
 
 })
-
-function playGame() {
-
-    let humanScore = 0;
-    let computerScore = 0;
-
-
-    if (humanScore > computerScore) {
-        console.log("You win the game!");
-    } else if (computerScore > humanScore) {
-        console.log("Computer wins the game!");
-    } else {
-        console.log("The game was tied!");
-    }
-}
-
-
-//playRound(humanSelection, computerSelection);
