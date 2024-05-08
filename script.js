@@ -4,7 +4,9 @@ let rockButton = document.getElementById("rockButton");
 let paperButton = document.getElementById("paperButton");
 let scissorsButton = document.getElementById("scissorsButton");
 
-let resultDisplay = document.getElementById("resultDisplay")
+let displayResult = document.getElementById("displayResult");
+let displayMethod = document.getElementById("displayMethod");
+
 let pointsPlayer = document.getElementById("pointsPlayer");
 let pointsComputer = document.getElementById("pointsComputer");
 
@@ -25,7 +27,7 @@ function getComputerChoice() {
 function playRound(humanChoice, computerChoice) {
 
     if (humanChoice === computerChoice) {
-        resultDisplay.innerHTML = "It's a tie!";
+        displayResult.innerHTML = "It's a tie!";
         return;
     }
 
@@ -35,10 +37,10 @@ function playRound(humanChoice, computerChoice) {
         (humanChoice === "scissors" && computerChoice === "paper")
     ) {
         humanScore++;
-        resultDisplay.innerHTML = "You win the round!";
+        displayResult.innerHTML = "You win the round!";
     } else {
         computerScore++;
-        resultDisplay.innerHTML = "Computer wins the round!";
+        displayResult.innerHTML = "Computer wins the round!";
     }
 
     pointsPlayer.innerHTML = `Player Score: ${humanScore}`;
@@ -55,11 +57,11 @@ function playRound(humanChoice, computerChoice) {
 function declareWinner() {
 
     if (humanScore > computerScore) {
-        resultDisplay.innerHTML = "You win the game!";
+        displayResult.innerHTML = "You win the game!";
     } else if (computerScore > humanScore) {
-        resultDisplay.innerHTML = "Computer wins the game!";
+        displayResult.innerHTML = "Computer wins the game!";
     } else {
-        resultDisplay.innerHTML = "The game was tied!";
+        displayResult.innerHTML = "The game was tied!";
     }
 }
 
