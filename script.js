@@ -28,6 +28,7 @@ function playRound(humanChoice, computerChoice) {
 
     if (humanChoice === computerChoice) {
         displayResult.innerHTML = "It's a tie!";
+        displayMethod.innerHTML = `${humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1)} ties with ${computerChoice}`;
         return;
     }
 
@@ -38,9 +39,11 @@ function playRound(humanChoice, computerChoice) {
     ) {
         humanScore++;
         displayResult.innerHTML = "You win the round!";
+        displayMethod.innerHTML = `${humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1)} beats ${computerChoice}!`;
     } else {
         computerScore++;
         displayResult.innerHTML = "Computer wins the round!";
+        displayMethod.innerHTML = `${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)} beats ${humanChoice}!`;
     }
 
     pointsPlayer.innerHTML = `Player Score: ${humanScore}`;
