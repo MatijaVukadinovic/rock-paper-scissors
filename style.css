@@ -16,6 +16,17 @@ main {
     gap: 20px;
 }
 
+.selectedChoice {
+    font-size: 100px;
+    display: flex;
+}
+
+.points {
+    font-size: 30px;
+    display: flex;
+    gap: 50px;
+}
+
 button {
     font-size: 100px;
     padding: 20px;
