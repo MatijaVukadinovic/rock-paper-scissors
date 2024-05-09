@@ -1,5 +1,3 @@
-let computerSelection = getComputerChoice();
-
 let rockButton = document.getElementById("rockButton");
 let paperButton = document.getElementById("paperButton");
 let scissorsButton = document.getElementById("scissorsButton");
@@ -16,14 +14,15 @@ let pointsComputer = document.getElementById("pointsComputer");
 let humanScore = 0;
 let computerScore = 0;
 
+let computerSelection = getComputerChoice();
+
 function getComputerChoice() {
 
     const choiceArray = ["rock", "paper", "scissors"];
 
     let randomInt = Math.floor(Math.random() * 3);
     let computerChoice = choiceArray[randomInt];
-
-    console.log(`Computer choice: ${computerChoice}`);
+    
     return computerChoice;
 }
 
@@ -49,8 +48,8 @@ function playRound(humanChoice, computerChoice) {
         displayMethod.innerHTML = `${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)} beats ${humanChoice}!`;
     }
 
-    pointsPlayer.innerHTML = `Player Score: ${humanScore}`;
-    pointsComputer.innerHTML = `Computer score: ${computerScore}`;
+    pointsPlayer.innerHTML = `Player: ${humanScore}`;
+    pointsComputer.innerHTML = `Computer: ${computerScore}`;
 
     if (humanScore === 5 || computerScore === 5) {
         declareWinner();
@@ -71,24 +70,56 @@ function declareWinner() {
     }
 }
 
-
 rockButton.addEventListener("click", function() {
 
+    selectedChoicePlayer.innerHTML = "&#9994";
+
     playRound("rock", computerSelection);
+
+    if (computerSelection === "rock") {
+        selectedChoiceComputer.innerHTML = "&#9994";
+    } else if (computerSelection === "paper") {
+        selectedChoiceComputer.innerHTML = "&#9995";
+    } else {
+        selectedChoiceComputer.innerHTML = "&#9996"
+    }
+    
     computerSelection = getComputerChoice();
 
 })
 
 paperButton.addEventListener("click", function() {
 
+    selectedChoicePlayer.innerHTML = "&#9995";
+
     playRound("paper", computerSelection);
+
+    if (computerSelection === "rock") {
+        selectedChoiceComputer.innerHTML = "&#9994";
+    } else if (computerSelection === "paper") {
+        selectedChoiceComputer.innerHTML = "&#9995";
+    } else {
+        selectedChoiceComputer.innerHTML = "&#9996"
+    }
+
     computerSelection = getComputerChoice();
 
 })
 
 scissorsButton.addEventListener("click", function() {
 
+    selectedChoicePlayer.innerHTML = "&#9996";
+
     playRound("scissors", computerSelection);
+
+    if (computerSelection === "rock") {
+        selectedChoiceComputer.innerHTML = "&#9994";
+    } else if (computerSelection === "paper") {
+        selectedChoiceComputer.innerHTML = "&#9995";
+    } else {
+        selectedChoiceComputer.innerHTML = "&#9996"
+    }
+
     computerSelection = getComputerChoice();
 
 })
