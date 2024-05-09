@@ -41,7 +41,14 @@ footer {
     gap: 50px;
 }
 
-button {
+.buttons button {
+    background-color: rgb(50, 50, 50);
+    border: 0px;
+    border-radius: 15px;
     font-size: 100px;
-    padding: 20px;
+    padding: 35px;
+}
+
+.buttons button:hover {
+    background-color: rgb(70, 70, 70);
 }
