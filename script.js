@@ -7,6 +7,9 @@ let scissorsButton = document.getElementById("scissorsButton");
 let displayResult = document.getElementById("displayResult");
 let displayMethod = document.getElementById("displayMethod");
 
+let selectedChoicePlayer = document.getElementById("selectedChoicePlayer");
+let selectedChoiceComputer = document.getElementById("selectedChoiceComputer");
+
 let pointsPlayer = document.getElementById("pointsPlayer");
 let pointsComputer = document.getElementById("pointsComputer");
 
